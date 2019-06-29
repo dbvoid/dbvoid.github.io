@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>端午节 | Hexo</title>
+  <title>CRUD | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Q1今天6月7号,太谷今日天气:白天小雨,夜间多云,气温15~32度,空气质量指数65(良);  not only 端午节(端午临中夏,时清日复长) but also 高考学子们的人生中重要的日子,俗称黑色的六月,果不其然,每年这个时候上天做好,不管是蒙蒙细雨也好或是倾盆大雨也罢,都预示着才子们的降临,都可以考一个理想的成绩;我印象中的我的高考经历已经没多少了,今天下午还跟我妈妈说,我小时候都可以">
+  <meta name="description" content="WORK(上集)这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点; ※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除">
+<meta name="keywords" content="CRUD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="端午节">
-<meta property="og:url" content="http://yoursite.com/2019/06/07/蹦床/index.html">
+<meta property="og:title" content="CRUD">
+<meta property="og:url" content="http://yoursite.com/2019/06/29/CRUD/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Q1今天6月7号,太谷今日天气:白天小雨,夜间多云,气温15~32度,空气质量指数65(良);  not only 端午节(端午临中夏,时清日复长) but also 高考学子们的人生中重要的日子,俗称黑色的六月,果不其然,每年这个时候上天做好,不管是蒙蒙细雨也好或是倾盆大雨也罢,都预示着才子们的降临,都可以考一个理想的成绩;我印象中的我的高考经历已经没多少了,今天下午还跟我妈妈说,我小时候都可以">
+<meta property="og:description" content="WORK(上集)这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点; ※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-07T13:12:51.414Z">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&bo=gAJrBTgEJAkRCcM!&rf=photolist&t=5">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13M2nSX0eAUtH/T6Kw5GNpXk3s*XeHmd4.Z3.K**yObn8eE0CKOJq0WHE!/b/dEoAAAAAAAAA&bo=OASABzgEgAcRCT4!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-06-29T12:28:38.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="端午节">
-<meta name="twitter:description" content="Q1今天6月7号,太谷今日天气:白天小雨,夜间多云,气温15~32度,空气质量指数65(良);  not only 端午节(端午临中夏,时清日复长) but also 高考学子们的人生中重要的日子,俗称黑色的六月,果不其然,每年这个时候上天做好,不管是蒙蒙细雨也好或是倾盆大雨也罢,都预示着才子们的降临,都可以考一个理想的成绩;我印象中的我的高考经历已经没多少了,今天下午还跟我妈妈说,我小时候都可以">
+<meta name="twitter:title" content="CRUD">
+<meta name="twitter:description" content="WORK(上集)这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点; ※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除">
+<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&bo=gAJrBTgEJAkRCcM!&rf=photolist&t=5">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,29 +158,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-蹦床" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CRUD" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      端午节
+      CRUD
     </h1>
   
 
         
-        <a href="/2019/06/07/蹦床/" class="archive-article-date">
-  	<time datetime="2019-06-07T11:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-07</time>
+        <a href="/2019/06/29/CRUD/" class="archive-article-date">
+  	<time datetime="2019-06-29T12:27:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><p>今天6月7号,太谷今日天气:白天小雨,夜间多云,气温15~32度,空气质量指数65(良);  not only 端午节(端午临中夏,时清日复长) but also 高考学子们的人生中重要的日子,俗称黑色的六月,果不其然,每年这个时候上天做好,不管是蒙蒙细雨也好或是倾盆大雨也罢,都预示着才子们的降临,都可以考一个理想的成绩;<br>我印象中的我的高考经历已经没多少了,今天下午还跟我妈妈说,我小时候都可以背一本书,都提醒他们什么时候该翻页了,现在的记忆怎么越来越差了(你们当时怎么不把我送到专门学记忆的地方,我妈妈说她也不懂),我妈妈说给你买的补脑的钙片,你都出去喂了狗狗吃,记性能不越来越差吗;笑哭了,哈哈,我记得我的高中三年第一年很顺利,考了很多次第一(普通班),尤其是第一次考试考了第一名最让我记忆犹新,那是我从小到大以来第一次考第一(现在想想都嘴角上扬,有点臭美),成绩是一门一门往出发卷子,那个激动的心情,手心都出汗了,出来数学哇132,陆陆续续的出了好多门,每一门都很高,本来早自习完了就没准备回去,但当班长把成绩单拿进来的我看到我是第一名的时候,我就觉得我该回家了,我要把我的喜悦心情第一时间分享给我的妈妈,我记得当我告诉我妈妈的时候,看的出来她的高兴是由内而外的往出散发,觉得自己是目前最最最最最…辛福的人啦,觉得自己的付出没有白费,每天都很开心,跟亲戚朋友说呀什么的.哈哈.到了高二,就开始了放松,文科的课历史还听一听,别的都不怎么听,有时候逃课去打篮球,有一次被班主任发现了,本来是我怂恿他们去打球,但班主任骂的是他们,怎么可以叫我出去打球,考不上怎么办?有点愧疚,还有一次因为上课说话,被发现,从第三排的黄金位置调到了最后一排,现在回想起来,自己确实做的很过分,班主任对你是那么的好,你确一次又一次让他失望,调到最后一排的哪一个月,班主任每天早上都会在我身后站一会,成绩也从1到了11,班主任<br>找我谈了话,过了几天我回到了原来的位置,开始了新的学习,很感谢我的班主任,没有他的悉心调教,不知道现在的我路在何方;高三就很平淡了,褪去了高一的青涩和高二的叛逆,也没怎么焦虑,真的没想过自己会不会考不上,平平淡淡的过完了高中三年的生活.<br>回到正题,自从上次更新已经四天了,你们想不想剌个姑娘,不管你们想不想,反正我是很想很想很想(重要的事情),她昨天回家了,昨天到现在我已经两天没见剌个姑娘的面了,还有一天的多就可以见到她了,开心(悄悄的告诉你们,我其实是想的是她给我带的粽子了,没想她,哈哈—————-怎么会呢,说的我都不信),遇到了她,现在的我学习也很有动力,做什么事情都充满了活力,舍友们说我跟变了一个人似的,我也不知道,我可能自己发现不了,她问我有没有想过一辈子的事,以前高中的时候有过(插个东西,刚刚下我一跳,突然未响应,我都没保存,好在没事),怪我自己的不够勇敢,我可能当时真的不懂这些,你们女生比较早熟,我可能思想不是很前进,根本不懂,我也不想瞒剌个姑娘,随着我阅历的提升,在该遇到的时候遇到了剌个姑娘,引用某音中的一句话”如果没有遇见你,我本来是可以忍受孤独的,遇见你之后我真的不想孤身一人,一刻都不要,我只想和你在一起”,我也很羡慕大大小小的爱情,as well as 英语老师从学生到异地到结婚的爱情;我希望我和你也有(这是我的秘密,嘿嘿,不能说出来哦);一会找她算账去,都两天没见她面了,她还说啥帐,是不是该捶她;<br>峰回路转,说说今天的人在囧途,到了太原本来应该做座的是618支,但我们座的是618,但我们不知道,座了快一个小时了,才发现不对劲,下车,步行,直到遇到三辆小摩拜,哈哈,来到了目的地已经快11点了,又累又饿,所以决定先吃饭,吃完再进去,进去之前把外套放那了,说玩完出来拿,,玩的途中想的都是给剌个姑娘拍视频,让她与我同在,不能我一个人出来玩,她都不知道我在玩什么,心不在焉的,友达说我成你们的摄影了,辛苦你了,你们还在玩的时候,我没心思玩了,躺在软软的垫子上给剌个姑娘发视频;他们把我埋了都不知道,哈哈,囧途还在继续,走的时候完全不知道有衣服这回事,快到火车站的时候望着窗外突然想到了衣服没拿,哈………………………………………………………………………….完结<br>                                                                                    DoubleBull</p>
-<p>efe<br>ew</p>
-<p>e</p>
+        <h2 id="WORK-上集"><a href="#WORK-上集" class="headerlink" title="WORK(上集)"></a>WORK(上集)</h2><pre><code>这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点;
+※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除);
+※:demo涉及到技术点有(spring+springMVC+mybatis+数据库Mysql+前端框架Bootstrap+项目管理工具Maven+分页插件pageHelper+逆向工程-Mybitis Generator),功能点有(分页+数据校验-jquery的前端校验和JSR后端校验+ajax+REST风格的URI,使用HTTP协议请求的方式,来表示对资源的操作)后两个功能点见CRUD下集;
+※:重要的还是搭建基础环境:
+        1.创建一个Maven工程
+        2.在pom.xml中引入项目依赖的jar包
+              &lt;!-- springMVC,spring 相关包 --&gt;
+                spring-webmvc
+            &lt;!-- spring做事务控制的 --&gt;
+                 spring-jdbc
+            &lt;!-- spring面向切面编程 --&gt;
+                spring-aspects
+            &lt;!-- mybitis --&gt;
+                mybits
+            &lt;!-- mybitis和spring的整合包 --&gt;
+                mybitis-spring
+            &lt;!-- 数据库连接池,驱动 --&gt;
+                c3p0,mysql-connector-java
+            &lt;!-- 其他 --&gt;
+                jstl;servlet-api(但这个服务器端有,但你不引入,jsp页面会报错,所以提供&lt;scope&gt;provided&lt;/scope&gt;,)项目发布到服务端时这个包就会被剔除掉;junit单元测试;
+            &lt;!-- 逆向工程的包 --&gt;
+                mybitis-generator-core
+        3.引入bootStrap前端框架
+        4.编写配置文件
+            A: web.xml
+                a:启动Spring容器的配置ContextLoaderListener
+                b:配置springMVC的前端控制器DispatchServlet
+                c:springMVC带的字符编码过滤器CharacterEncodingFilter
+                d:使用REST风格的URI,将页面普通的post请求转换为指定的delete或者put请求HiddenHttpMethodFilter
+                注意:过滤器可以有多个,但先后顺序很重要,一定要把字符编码的过滤器放到所有过滤器之前,防止乱码;
+            B: spring-mvc.xml(包含网站跳转逻辑的控制)
+                a: 只扫描controller的注解扫描
+                b: 配置视图解析器,方便页面返回
+                c:default-servlet-handler用于将springMVC不能处理的请求交给tomcat
+                d:annotation-driver用于支持springMVC更高级的一些功能,JSR303校验,快捷的ajax...,和映射动态请求
+            C: applicationContext.xml,spring的配置文件,这里主要配置和业务逻辑相关的
+                a: 注解扫描,除了controller层都要扫
+                b: 数据源
+                c: 配置和mybitis的整合
+                d: 配置扫描器,将mybitis接口的实现加入到ioc容器中
+                e: 事务控制的配置
+                f: 开启事务控制,主要使用配置式
+            D: mybitis-config.xml
+         5. 测试Mapper
+                 以前测试都是使用Junit来进行单元测试,但这样的经常创建spring容器对象,过于繁琐,所以推荐Spring的项目就可以使用Spring的单元测试,可以自动注入我们需要的组件
+                a:导入Spring-test包
+                b:@ContextConfiguration指定Spring配置文件的位置
+                c: 直接autowired要使用的组件即可
+               注意:测试中可以使用sqlSession,来获取mapper执行批量操作
+※ 逆向工程
+        导包---编写mbg.xml---编写测试方法自动生成bean,dao层接口中的mapper,映射文件mapper.xml,如果需要可以再做修改;
+ ※ 分页 
+         a: 引入分页插件包
+        b: 最后还要在mybitis中配置,比如分页合理化等的配置
+        在查询之前只需要调用,传入页码,以及每页大小,PageHelper.startPage(pn, 5);,satrtPage后面紧跟的查询就是一个分页查询,List&lt;Employee&gt; emps = employeeService.getAllEmps();,/使用pageInfo包装查询后的结果,只需要将pageInfo交给页面,PageInfo封装了详细的信息,包括有我们查询出来的数据 ,传入连续显示的页数PageInfo pi = new PageInfo(emps,5);model.addAttribute(&quot;pageInfo&quot;, pi); return &quot;list&quot;;
+  ※ 返回json,采用ajax请求
+              1.index.jsp跳转到/emps,执行完查询操作跳转到list.jsp页面,这种服务器返回页面给浏览器的方式有局限性,如今是移动互联网的时代,返回页面给安卓端或IOS端,他们做这个解析比较困难,所以现在流行使用服务器把有效数据已JSON格式返回给浏览(springMVC提供的@ResponseBody注解可以将返回值转换成json字符串,使用前提是需要导入jackson包)
+            2.浏览器收到json字符串,可以使用js对json进行解析,使用js通过dom增删改改变页面
+            3.返回json,实现客户端的无关性
+</code></pre><h2 id="LOVE"><a href="#LOVE" class="headerlink" title="LOVE"></a>LOVE</h2><p>快来看看你的坏话,哈哈<br>关于她的备忘录:<br>    是一个喜欢吃的姑娘,嗯,对,没错 鱼,虾,肥肠,火锅,红枣,红豆,鸡蛋,偶尔吃点零食,不吃金针菇;每次都说她比我吃的多,我吃的了吗?哈哈不就是那次让你多吃了几个包子么,总是说自己月半,说实话我从来没觉得你有,多吃点(放心,抱的动),好好调理,去了北京就没有什么小毛病了,最近也不能吃辣椒和鱼虾;<br>    是一个可爱到犯规的姑娘,昨天单眼皮,今天双眼皮,明天一单一双,每天都是捶你啊,掐死你,告诉我气死她我当孤儿,哈哈,每天都是累坏了,困坏了,我要睡了,你自己玩吧,还说她能烦死我,每天胡思乱想,话说什么什么,哈哈是不是很可爱;<br>   是一个很独立的姑娘,自己给爸妈做过蒸蛋,自己一个人在太原跑来跑去,自己去健身,还带你同学回家哈哈,有自己的想法…;认识你到现在,你也是很努力的一娃,闲不下来,闲下来就有愧疚的感觉,觉得自己浪费了时间,什么也没干;<br>   还有好多好多,慢慢说,哈哈<br>   会记下你的好多小事,放在你的专属备忘录,在我心情不好的时候可以看看,应该会瞬间回血,充满活力;会一直支持你,相信你,认识你之后,从来没有羡慕任何人,以后的每一天,希望你都在;<br>   重点你该复习了,每天都收拾好自己,也不知道在干嘛,也不理我,<br>   少看一会就行,学到一点就会让你有成就感,乖;<br><img src="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&amp;bo=gAJrBTgEJAkRCcM!&amp;rf=photolist&amp;t=5" alt="avatar"></p>
+<p><img src="http://m.qpic.cn/psb?/V13M2nSX0eAUtH/T6Kw5GNpXk3s*XeHmd4.Z3.K**yObn8eE0CKOJq0WHE!/b/dEoAAAAAAAAA&amp;bo=OASABzgEgAcRCT4!&amp;rf=viewer_4" alt="avatar"><br>                                                                                宠你一辈子<br>                                                                                  Double bull</p>
 
       
 
@@ -206,6 +268,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CRUD</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/07/蹦床/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/29/CRUD/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +343,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/11/我本可以/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我本可以
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/03/G1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">G1</div>
+    <a href="/2019/06/19/大学/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大学</div>
       <i class="icon-circle-right"></i>
     </a>
   
