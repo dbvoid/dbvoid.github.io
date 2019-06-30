@@ -152,6 +152,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CRUD下集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/30/CRUD下集/">CRUD下集</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/30/CRUD下集/" class="archive-article-date">
+  	<time datetime="2019-06-30T01:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="WORK"><a href="#WORK" class="headerlink" title="WORK"></a>WORK</h2><pre><code>五点多就醒了,啊哈,既然醒了也没睡意了,想想昨天CRUD还没有写完,抓紧写完,也算完成一件小事,把这几天学的做一个整理,便于以后查看;这个是ssm的增删改查小demo,在做个人毕设时可以直接copy过来,省了很多前期工作;
+废话不多说,开始咯,还是写自我感觉重要的点;
+※ 新增员工
+    1. 在采用POST请求时,表单中员工数据如果采用dom的方式获取再拼接的话比较繁琐,这时jQuery提供了serialize()方法将表格中的内容序列化为字符串;
+    2. 新增完成之后,需要来到最后一页,显示刚才保存的数据,为了确保是最后一页,传入的参数为总记录数,而不是总页数,所以需定义一个全局的总记录数(因为PageHelper配置的时候配置reasonable合理化参数)
+</code></pre><p>—小剌诱惑我,不行,去做饭了,又看了会电视—</p>
+<p>—打球回来到晚上了,哈哈,再写点校验—</p>
+<pre><code>※ 校验员工
+    在点击保存按钮时,其方法在向服务端发送ajax请求之前,先要对提交给服务器的数据进行校验(包括jquery校验格式是否正确和后端校验是否唯一);
+    前端校验采用bootstrap框架提供的class来进行
+</code></pre><p>   <img src="http://a1.qpic.cn/psb?/V13M2nSX0JrMMA/ChkTIZgNBN2C27XYp7.Y*zhal9P1B90u.hmCovG6eL0!/m/dLgAAAAAAAAAnull&amp;bo=hgNVAoYDVQIDCSw!&amp;rf=photolist&amp;t=5" alt="avatar"></p>
+<p>  <img src="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/ruwGRjdvVk.BU67BMIG*sIpEt6cUdX4DyvPzmEAwsvE!/b/dAcBAAAAAAAA&amp;bo=AwNzAgMDcwIDCSw!&amp;rf=viewer_4" alt="avatar"></p>
+<p>  一天时间写了有点少,明天把剩余把后端校验和修改,删除写完.明天就是7月1号了,真快啊<br>  时间不早了,不发牢骚了,最后分享一句话:</p>
+<h1 id="要有定力-要有理想-不惧困难-永远向前-好好分析一下自己-了解你自己-勇敢地做你自己-机会总会有的-永不放弃-但问耕耘-莫问收获-志存高远-脚踏实地-送给自己-送给剌个姑娘-撒拉嘿"><a href="#要有定力-要有理想-不惧困难-永远向前-好好分析一下自己-了解你自己-勇敢地做你自己-机会总会有的-永不放弃-但问耕耘-莫问收获-志存高远-脚踏实地-送给自己-送给剌个姑娘-撒拉嘿" class="headerlink" title="要有定力,要有理想,不惧困难,永远向前,好好分析一下自己,了解你自己,勇敢地做你自己, 机会总会有的,永不放弃,但问耕耘,莫问收获,志存高远,脚踏实地#送给自己,送给剌个姑娘,撒拉嘿."></a>要有定力,要有理想,不惧困难,永远向前,好好分析一下自己,了解你自己,勇敢地做你自己, 机会总会有的,永不放弃,但问耕耘,莫问收获,志存高远,脚踏实地#送给自己,送给剌个姑娘,撒拉嘿.</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">但问耕耘,莫问收获,志存高远,脚踏实地</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/30/CRUD下集/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CRUD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -649,6 +735,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">但问耕耘,莫问收获,志存高远,脚踏实地</a>
               </li>
             
             <div class="clearfix"></div>
