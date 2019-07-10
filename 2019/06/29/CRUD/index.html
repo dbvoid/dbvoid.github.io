@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="WORK(上集)这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点; ※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&bo=gAJrBTgEJAkRCcM!&rf=photolist&t=5">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V13M2nSX0eAUtH/T6Kw5GNpXk3s*XeHmd4.Z3.K**yObn8eE0CKOJq0WHE!/b/dEoAAAAAAAAA&bo=OASABzgEgAcRCT4!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-06-29T12:28:38.875Z">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/P451ssLUuuHch2pHS7HhmswdqFaacoCCSh25QGaP4sY!/b/dBMBAAAAAAAA&bo=gAJrBTgEJAkRCcM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/SBsokNzy0RRCgMTNrchqGM1Gyt4yy*KggxVE7mESp8w!/b/dCEBAAAAAAAA&bo=WAIgA1gCIAMRCT4!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-07-10T05:31:03.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRUD">
 <meta name="twitter:description" content="WORK(上集)这几天看SSM轻量级框架这本书来回顾了SSM的知识,在回顾的时候总会感觉到之前懂得的知识现在看起来还有点吃力,意识到什么东西你不经常用不管之前再熟悉也会生疏,眼高手低,所以利用回顾之余,写了一个小demo(SSM-CRUD),这里记录一下自己觉得在做的时候感觉重要的点; ※:先说一下CRUD: Create(创建) Retrieve(查询) Update(更新) Delete(删除">
-<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&bo=gAJrBTgEJAkRCcM!&rf=photolist&t=5">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/P451ssLUuuHch2pHS7HhmswdqFaacoCCSh25QGaP4sY!/b/dBMBAAAAAAAA&bo=gAJrBTgEJAkRCcM!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -237,8 +237,8 @@
               1.index.jsp跳转到/emps,执行完查询操作跳转到list.jsp页面,这种服务器返回页面给浏览器的方式有局限性,如今是移动互联网的时代,返回页面给安卓端或IOS端,他们做这个解析比较困难,所以现在流行使用服务器把有效数据已JSON格式返回给浏览(springMVC提供的@ResponseBody注解可以将返回值转换成json字符串,使用前提是需要导入jackson包)
             2.浏览器收到json字符串,可以使用js对json进行解析,使用js通过dom增删改改变页面
             3.返回json,实现客户端的无关性
-</code></pre><h2 id="LOVE"><a href="#LOVE" class="headerlink" title="LOVE"></a>LOVE</h2><p>快来看看你的坏话,哈哈<br>关于她的备忘录:<br>    是一个喜欢吃的姑娘,嗯,对,没错 鱼,虾,肥肠,火锅,红枣,红豆,鸡蛋,偶尔吃点零食,不吃金针菇;每次都说她比我吃的多,我吃的了吗?哈哈不就是那次让你多吃了几个包子么,总是说自己月半,说实话我从来没觉得你有,多吃点(放心,抱的动),好好调理,去了北京就没有什么小毛病了,最近也不能吃辣椒和鱼虾;<br>    是一个可爱到犯规的姑娘,昨天单眼皮,今天双眼皮,明天一单一双,每天都是捶你啊,掐死你,告诉我气死她我当孤儿,哈哈,每天都是累坏了,困坏了,我要睡了,你自己玩吧,还说她能烦死我,每天胡思乱想,话说什么什么,哈哈是不是很可爱;<br>   是一个很独立的姑娘,自己给爸妈做过蒸蛋,自己一个人在太原跑来跑去,自己去健身,还带你同学回家哈哈,有自己的想法…;认识你到现在,你也是很努力的一娃,闲不下来,闲下来就有愧疚的感觉,觉得自己浪费了时间,什么也没干;<br>   还有好多好多,慢慢说,哈哈<br>   会记下你的好多小事,放在你的专属备忘录,在我心情不好的时候可以看看,应该会瞬间回血,充满活力;会一直支持你,相信你,认识你之后,从来没有羡慕任何人,以后的每一天,希望你都在;<br>   重点你该复习了,每天都收拾好自己,也不知道在干嘛,也不理我,<br>   少看一会就行,学到一点就会让你有成就感,乖;<br><img src="http://a4.qpic.cn/psb?/V13M2nSX0eAUtH/xpR2.5UHi8bUocLikE7eLLEJzSi3dd39yXWpfOKUrbw!/m/dJ8AAAAAAAAAnull&amp;bo=gAJrBTgEJAkRCcM!&amp;rf=photolist&amp;t=5" alt="avatar"></p>
-<p><img src="http://m.qpic.cn/psb?/V13M2nSX0eAUtH/T6Kw5GNpXk3s*XeHmd4.Z3.K**yObn8eE0CKOJq0WHE!/b/dEoAAAAAAAAA&amp;bo=OASABzgEgAcRCT4!&amp;rf=viewer_4" alt="avatar"><br>                                                                                宠你一辈子<br>                                                                                  Double bull</p>
+</code></pre><h2 id="LOVE"><a href="#LOVE" class="headerlink" title="LOVE"></a>LOVE</h2><p>快来看看你的坏话,哈哈<br>关于她的备忘录:<br>    是一个喜欢吃的姑娘,嗯,对,没错 鱼,虾,肥肠,火锅,红枣,红豆,鸡蛋,偶尔吃点零食,不吃金针菇;每次都说她比我吃的多,我吃的了吗?哈哈不就是那次让你多吃了几个包子么,总是说自己月半,说实话我从来没觉得你有,多吃点(放心,抱的动),好好调理,去了北京就没有什么小毛病了,最近也不能吃辣椒和鱼虾;<br>    是一个可爱到犯规的姑娘,昨天单眼皮,今天双眼皮,明天一单一双,每天都是捶你啊,掐死你,告诉我气死她我当孤儿,哈哈,每天都是累坏了,困坏了,我要睡了,你自己玩吧,还说她能烦死我,每天胡思乱想,话说什么什么,哈哈是不是很可爱;<br>   是一个很独立的姑娘,自己给爸妈做过蒸蛋,自己一个人在太原跑来跑去,自己去健身,还带你同学回家哈哈,有自己的想法…;认识你到现在,你也是很努力的一娃,闲不下来,闲下来就有愧疚的感觉,觉得自己浪费了时间,什么也没干;<br>   还有好多好多,慢慢说,哈哈<br>   会记下你的好多小事,放在你的专属备忘录,在我心情不好的时候可以看看,应该会瞬间回血,充满活力;会一直支持你,相信你,认识你之后,从来没有羡慕任何人,以后的每一天,希望你都在;<br>   重点你该复习了,每天都收拾好自己,也不知道在干嘛,也不理我,<br>   少看一会就行,学到一点就会让你有成就感,乖;<br><img src="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/P451ssLUuuHch2pHS7HhmswdqFaacoCCSh25QGaP4sY!/b/dBMBAAAAAAAA&amp;bo=gAJrBTgEJAkRCcM!&amp;rf=viewer_4" alt="avatar"></p>
+<p><img src="http://m.qpic.cn/psb?/V13M2nSX0JrMMA/SBsokNzy0RRCgMTNrchqGM1Gyt4yy*KggxVE7mESp8w!/b/dCEBAAAAAAAA&amp;bo=WAIgA1gCIAMRCT4!&amp;rf=viewer_4" alt="avatar"><br>                                                                                宠你一辈子<br>                                                                                  Double bull</p>
 
       
 
@@ -480,15 +480,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">但问耕耘,莫问收获,志存高远,脚踏实地</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观后感</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
               </li>
             
             <div class="clearfix"></div>
